@@ -1,0 +1,48 @@
+*,html{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    background-color: #3B86B8;
+    height: 50px;
+    width: 100%;
+}
+
+section{
+    background-color: #4D515D;
+    height: 500px;
+    width: 20%;
+    display: inline-block;
+}
+
+section li{
+    display: block;
+    list-style: none;
+}
+
+section a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    display: block;
+}
+
+section a:hover{
+    background-color: #3B86B8
+}
+
+#contenido{
+    position: absolute;
+    display: inline-block;
+    width: 80%;
+    height: 500px;
+    background-color: white;
+}
+
+footer{
+    background-color: aquamarine;
+    height: 50px;
+    width: 100%;
+}
