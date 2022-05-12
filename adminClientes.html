@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>garesp soft</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/datatables.min.css">
+</head>
+<body>
+    <header>
+        <h1>GARESP - Servicio Informático</h1>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li>
+                    <a href="adminClientes.html" class="active">Administrar clientes</a>
+                </li>
+                <li>
+                    <a href="movClientes.html">Movimientos clientes</a>
+                </li>
+                <li><a href="notas.html">Notas entrada</a></li>
+                <li><a href="cotizacion.html">Cotizaciones</a></li>
+            </ul>
+        </nav>
+    </section>
+    <section id="contenido">
+        <h2>Administracion de clientes</h2>
+        <div id="adminButtons">
+            <fieldset>
+                <legend>Nuevo</legend>
+                <button id="btnNuevoCliente">Nuevo</button>
+            </fieldset>
+            <fieldset>
+                <legend>Guardar</legend>
+                <button>Guardar</button>
+            </fieldset>
+            <fieldset>
+                <legend>Registro</legend>
+                <button>Registro</button>
+            </fieldset>
+        </div>
+        <form action="" id="formCliente">
+            <fieldset>
+                <legend>Datos generales</legend>
+                <label for="">Nombre del cliente:</label>
+                <input type="text">
+                <label for="">Telefono:</label>
+                <input type="text">
+                <label for="">Correo Electronico:</label>
+                <input type="email">
+                <label for="">Dirección:</label>
+                <input type="text">
+            </fieldset>
+            <fieldset>
+                <legend>Datos de facturacion</legend>
+                <label for="">Razon social:</label>
+                <input type="text">
+                <label for="">RFC:</label>
+                <input type="text">
+                <label for="">Uso de cfdi:</label>
+                <input type="text">
+            </fieldset>
+            <button type="submit" id="saveClient">Guardar cliente</button>
+        </form>
+        <table id="table_id" class="display">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Celular</th>
+                    <th>Correo Electronico</th>
+                    <th>Domicilio</th>
+                    <th>Razon social</th>
+                    <th>RFC</th>
+                    <th>CFDI</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Eduardo Garcia lopez</td>
+                    <td>Eduardo Garcia lopez</td>
+                    <td>Eduardo Garcia lopez</td>
+                    <td>Eduardo Garcia lopez</td>
+                    <td>Eduardo Garcia lopez</td>
+                    <td>Eduardo Garcia lopez</td>
+                    <td>Eduardo Garcia lopez</td>
+                    <td><button>Editar</button></td>
+                    <td><button>Eliminar</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Cecilia Garcia lopez</td>
+                    <td>Cecilia Garcia lopez</td>
+                    <td>Cecilia Garcia lopez</td>
+                    <td>Cecilia Garcia lopez</td>
+                    <td>Cecilia Garcia lopez</td>
+                    <td>Cecilia Garcia lopez</td>
+                    <td>Cecilia Garcia lopez</td>
+                    <td><button>Editar</button></td>
+                    <td><button>Eliminar</button></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ulises Dell 7480</td>
+                    <td>Ulises Dell 7480</td>
+                    <td>Ulises Dell 7480</td>
+                    <td>Ulises Dell 7480</td>
+                    <td>Ulises Dell 7480</td>
+                    <td>Ulises Dell 7480</td>
+                    <td>Ulises Dell 7480</td>
+                    <td><button>Editar</button></td>
+                    <td><button>Eliminar</button></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Profesor Ivan</td>
+                    <td>Profesor Ivan</td>
+                    <td>Profesor Ivan</td>
+                    <td>Profesor Ivan</td>
+                    <td>Profesor Ivan</td>
+                    <td>Profesor Ivan</td>
+                    <td>Profesor Ivan</td>
+                    <td><button>Editar</button></td>
+                    <td><button>Eliminar</button></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Arquitecto Yolomecalt</td>
+                    <td>Arquitecto Yolomecalt</td>
+                    <td>Arquitecto Yolomecalt</td>
+                    <td>Arquitecto Yolomecalt</td>
+                    <td>Arquitecto Yolomecalt</td>
+                    <td>Arquitecto Yolomecalt</td>
+                    <td>Arquitecto Yolomecalt</td>
+                    <td><button>Editar</button></td>
+                    <td><button>Eliminar</button></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Arquitecto tlaxiaco</td>
+                    <td>Arquitecto tlaxiaco</td>
+                    <td>Arquitecto tlaxiaco</td>
+                    <td>Arquitecto tlaxiaco</td>
+                    <td>Arquitecto tlaxiaco</td>
+                    <td>Arquitecto tlaxiaco</td>
+                    <td>Arquitecto tlaxiaco</td>
+                    <td><button>Editar</button></td>
+                    <td><button>Eliminar</button></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Alma Simancas Acevedo</td>
+                    <td>Alma Simancas Acevedo</td>
+                    <td>Alma Simancas Acevedo</td>
+                    <td>Alma Simancas Acevedo</td>
+                    <td>Alma Simancas Acevedo</td>
+                    <td>Alma Simancas Acevedo</td>
+                    <td>Alma Simancas Acevedo</td>
+                    <td><button>Editar</button></td>
+                    <td><button>Eliminar</button></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Eufronsina</td>
+                    <td>Eufronsina</td>
+                    <td>Eufronsina</td>
+                    <td>Eufronsina</td>
+                    <td>Eufronsina</td>
+                    <td>Eufronsina</td>
+                    <td>Eufronsina</td>
+                    <td><button>Editar</button></td>
+                    <td><button>Eliminar</button></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Belen</td>
+                    <td>Belen</td>
+                    <td>Belen</td>
+                    <td>Belen</td>
+                    <td>Belen</td>
+                    <td>Belen</td>
+                    <td>Belen</td>
+                    <td><button>Editar</button></td>
+                    <td><button>Eliminar</button></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Mitzy</td>
+                    <td>Mitzy</td>
+                    <td>Mitzy</td>
+                    <td>Mitzy</td>
+                    <td>Mitzy</td>
+                    <td>Mitzy</td>
+                    <td>Mitzy</td>
+                    <td><button>Editar</button></td>
+                    <td><button>Eliminar</button></td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Elisa</td>
+                    <td>Elisa</td>
+                    <td>Elisa</td>
+                    <td>Elisa</td>
+                    <td>Elisa</td>
+                    <td>Elisa</td>
+                    <td>Elisa</td>
+                    <td><button>Editar</button></td>
+                    <td><button>Eliminar</button></td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Andres García España</td>
+                    <td>9531272241</td>
+                    <td>a.ge9411@gmail.com</td>
+                    <td>Colonia Linda Vista</td>
+                    <td>Andres García España</td>
+                    <td>GAEA941128IT5</td>
+                    <td>Gastos en general</td>
+                    <td><button>Editar</button></td>
+                    <td><button>Eliminar</button></td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <footer>Pie de página</footer>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                                LIBRERIAS                                -->
+    <!-- ----------------------------------------------------------------------- -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/datatables.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

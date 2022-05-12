@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>garesp soft</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/datatables.min.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/default.date.css">
+    <link rel="stylesheet" href="css/default.time.css">
+</head>
+<body>
+    <header>
+        <h1>GARESP - Servicio Informático</h1>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li>
+                    <a href="adminClientes.html">Administrar clientes</a>
+                </li>
+                <li>
+                    <a href="movClientes.html">Movimientos clientes</a>
+                </li>
+                <li><a href="notas.html" class="active">Notas entrada</a></li>
+                <li><a href="cotizacion.html">Cotizaciones</a></li>
+            </ul>
+        </nav>
+    </section>
+    <section id="contenido">
+        <h2>Notas de entrada</h2>
+        <div>
+            <form action="" id="formNotas">
+                <div id="folio">
+                    <fieldset>
+                        <legend>Folio</legend>
+                        <span>01</span>
+                    </fieldset>
+                </div>
+                <div id="fechas">
+                    <fieldset>
+                        <legend>Fechas</legend>
+                        <label for="">
+                            Fecha de recepcion
+                        </label>
+                        <input type="text" class="datepicker">
+                        <label for="">
+                            Fecha de entrega
+                        </label>
+                        <input type="text" class="datepicker">
+                        <label for="">
+                            Hora de entrega
+                        </label>
+                        <input type="date" class="timepicker">
+                    </fieldset>
+                </div>
+                <div id="cliente">
+                    <fieldset>
+                        <legend>Cliente</legend>
+                        <label for="">
+                            Nombre del cliente
+                        </label>
+                        <select name="" id="">
+                            <option value=""></option>
+                            <option value="">Andres García España</option>
+                            <option value="">Elisa Sanchez Jimenez</option>
+                            <option value="">Eufrosina Eufronsina Eufronsina</option>
+                        </select>
+                    </fieldset>
+                </div>
+                <div id="facturacion">
+                    <fieldset>
+                        <legend>Facturación</legend>
+                        <label for="">
+                            Facturar
+                        </label>
+                        <select name="" id="">
+                            <option value=""></option>
+                            <option value="">Sí</option>
+                            <option value="">No</option>
+                        </select>
+                    </fieldset>
+                </div>
+                <div id="servicioEquipo">
+                    <div id="dispositivo">
+                        <fieldset>
+                            <legend>Dispositivo</legend>
+                            <label for="">Cantidad</label>
+                            <input type="number" value="1">
+                            <label for="">
+                                Tipo de dispositivo
+                            </label>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value="">Laptop</option>
+                                <option value="">AIO</option>
+                                <option value="">PC Escritorio</option>
+                                <option value="">Impresora</option>
+                                <option value="">Celular</option>
+                            </select>
+                            <label for="">Marca</label>
+                            <input type="text">
+                            <label for="">Modelo</label>
+                            <input type="text">
+                        </fieldset>
+                    </div>
+                    <fieldset>
+                        <legend>Accesorios</legend>
+                        <label for="">Descripción</label>
+                        <input type="text">
+                    </fieldset>
+                    <div id="problema">
+                        <fieldset>
+                            <legend>Problema del equipo</legend>
+                            <textarea name="" id="" cols="30" rows="5"></textarea>
+                        </fieldset>
+                    </div>
+                    <div id="observacion">
+                        <fieldset>
+                            <legend>Observaciones</legend>
+                            <textarea name="" id="" cols="0" rows="5"></textarea>
+                        </fieldset>
+                    </div>
+                    <div id="servicio">
+                        <fieldset>
+                            <legend>Servicio</legend>
+                            <label for="">
+                                Servicio
+                            </label>
+                            <input type="text">
+                            <label for="">
+                                Precio
+                            </label>
+                            <input type="text">
+                        </fieldset>
+                    </div>
+                    <div id="plusServicio">
+                        <fieldset>
+                            <legend>Plus</legend>
+                            <button>Agregar</button>
+                        </fieldset>
+                    </div>
+                </div>
+                <div id="lista">
+                    <fieldset>
+                        <legend>Tabla de servicios</legend>
+                        <table id="table_id" class="display">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Servicio</th>
+                                    <th>Monto</th>
+                                    <th>Editar</th>
+                                    <th>Eliminar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Drenado de tinta</td>
+                                    <td>200</td>
+                                    <td><button>Editar</button></td>
+                                    <td><button>Eliminar</button></td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Cambio de HDD a SSD</td>
+                                    <td>1250</td>
+                                    <td><button>Editar</button></td>
+                                    <td><button>Eliminar</button></td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Formateo Windows</td>
+                                    <td>400</td>
+                                    <td><button>Editar</button></td>
+                                    <td><button>Eliminar</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                </div>
+                <div id="newServicio">
+                    <fieldset>
+                        <legend>Nuevo</legend>
+                        <button>Nuevo</button>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Guardar</legend>
+                        <button>Guardar</button>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Registro</legend>
+                        <button>Registro</button>
+                    </fieldset>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer>Pie de página</footer>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/datatables.min.js"></script>
+    <script src="js/picker.js"></script>
+    <script src="js/picker.date.js"></script>
+    <script src="js/picker.time.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

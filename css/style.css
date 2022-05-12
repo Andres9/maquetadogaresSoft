@@ -1,48 +1,310 @@
-*,html{
+*,
+html {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-header{
+header {
     background-color: #3B86B8;
     height: 50px;
     width: 100%;
+    text-align: center;
 }
 
-section{
+/* -------------------------------------------------------------------------- */
+/*                             SECCION NAVEGACION                             */
+/* -------------------------------------------------------------------------- */
+
+section {
     background-color: #4D515D;
-    height: 500px;
+    min-height: 800px;
+    max-height: auto;
     width: 20%;
     display: inline-block;
 }
 
-section li{
+section li {
     display: block;
     list-style: none;
 }
 
-section a{
+section a {
     text-decoration: none;
     color: white;
     padding: 20px;
     display: block;
 }
 
-section a:hover{
+section a:hover {
     background-color: #3B86B8
 }
 
-#contenido{
+.active {
+    background-color: #3B86B8;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                           SECCCION DEL CONTENIDO                           */
+/* -------------------------------------------------------------------------- */
+
+#contenido {
     position: absolute;
     display: inline-block;
     width: 80%;
-    height: 500px;
     background-color: white;
+    padding-bottom: 3px;
 }
 
-footer{
+#contenido h2 {
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    background-color: #F6F6F6;
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* ------------------ FORMULARIO ADMINISTRACION DE CLIENTES ----------------- */
+#formCliente {
+    width: 50%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /*     background-color: #94C454; */
+    margin: 0 auto;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+fieldset {
+
+    padding: 10px;
+    margin: 10px;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+#formCliente label {
+    width: 25%;
+    height: 30px;
+    padding: 5px;
+    display: inline-block;
+}
+
+#formCliente input {
+    width: 70%;
+    height: 30px;
+    padding: 5px;
+    margin: 5px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+#formCliente button {
+    width: 100%;
+    height: 3em;
+    margin-top: 5px;
+    background-color: #3B86B8;
+    font-weight: bold;
+}
+
+/* --------------------- TABLA CON REGISTRO DE USUARIOS --------------------- */
+
+#table_id_wrapper{
+    width: 95%;
+    margin: 0 auto;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* ------------------- BOTONES ADMINISTRACION DE CLIENTES ------------------- */
+#adminButtons{
+    display: flex;
+    justify-content: flex-end;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.3);
+    margin: 10px;
+}
+
+#adminButtons fieldset{
+    width: 30%;
+}
+
+#adminButtons button{
+    width: 100%;
+    height: 40px;
+    background-color: #3B86B8;
+    color: #FFF;
+    font-weight: bold;
+}
+
+/* ----------------------- FORMULARIO NOTAS DE ENTRADA ---------------------- */
+
+#folio {
+    width: 30%;
+    font-size: 1em;
+    font-weight: bold;
+    display: inline-block;
+    background-color: #000;
+    color: #FFF;
+}
+
+#folio span {
+    font-size: 4.4em;
+    color: #FFF;
+}
+
+#fechas {
+    width: 69%;
+    display: inline-block;
+}
+
+#cliente {
+    width: 63%;
+    display: inline-block;
+}
+
+#facturacion {
+    width: 36%;
+    display: inline-block;
+}
+
+#dispositivo {}
+
+#formNotas #dispositivo label {
+    width: 15%;
+    display: inline-block;
+}
+
+#formNotas #dispositivo input {
+    width: 31%;
+    display: inline-block;
+}
+
+#formNotas #dispositivo select {
+    width: 31%;
+    display: inline-block;
+}
+
+#problema {
+    width: 50%;
+    display: inline-block;
+}
+
+#problema textarea {
+    width: 100%;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+#observacion {
+    width: 49%;
+    display: inline-block;
+}
+
+#observacion textarea {
+    width: 100%;
+    padding: 10px;
+}
+
+#servicio {
+    width: 85%;
+    display: inline-block;
+}
+
+#plusServicio {
+    width: 14%;
+    display: inline-block;
+}
+
+#formNotas #servicio label {
+    width: 10%;
+    display: inline-block;
+}
+
+#formNotas #servicio input {
+    width: 36%;
+    display: inline-block;
+}
+
+#lista {
+    width: 85%;
+    display: inline-block;
+}
+
+#newServicio{
+    width: 14%;
+    display: inline-block;
+    position: absolute;
+}
+
+#formNotas {
+    width: 90%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /*     background-color: #94C454; */
+    margin: 0 auto;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+fieldset {
+    padding: 10px;
+    margin: 10px;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#formNotas label {
+    width: 25%;
+    height: 30px;
+    padding: 5px;
+    display: inline-block;
+}
+
+#formNotas input {
+    width: 70%;
+    height: 30px;
+    padding: 5px;
+    margin: 5px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+#formNotas select {
+    width: 70%;
+    height: 30px;
+    padding: 5px;
+    margin: 5px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+#formNotas button {
+    width: 100%;
+    height: 3em;
+    margin-top: 5px;
+    background-color: #3B86B8;
+    font-weight: bold;
+}
+
+#servicioEquipo{
+    display: ;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                            SECCION PIE DE PAGINA                           */
+/* -------------------------------------------------------------------------- */
+
+footer {
+    position: relative;
+    top: 450px;
     background-color: aquamarine;
     height: 50px;
     width: 100%;
+    margin-top: 25px;
 }
