@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,64 +8,73 @@
     <title>garesp soft</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/datatables.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,900;1,500;1,900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header>
         <h1>GARESP - Servicio Informático</h1>
     </header>
-    <section>
-        <nav>
-            <ul>
-                <li>
-                    <a href="adminClientes.html" class="active">Administrar clientes</a>
-                </li>
-                <li>
-                    <a href="movClientes.html">Movimientos clientes</a>
-                </li>
-                <li><a href="notas.html">Notas entrada</a></li>
-                <li><a href="cotizacion.html">Cotizaciones</a></li>
-            </ul>
-        </nav>
-    </section>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="adminClientes.html" class="active"><i class="fa-solid fa-user icono"></i> Administrar clientes</a>
+            </li>
+            <li>
+                <a href="movClientes.html"><i class="fa-solid fa-user icono"></i> Movimientos clientes</a>
+            </li>
+            <li><a href="notas.html"><i class="fa-solid fa-user icono"></i> Notas entrada</a></li>
+            <li><a href="cotizacion.html"><i class="fa-solid fa-user icono"></i> Cotizaciones</a></li>
+        </ul>
+    </nav>
+
     <section id="contenido">
         <h2>Administracion de clientes</h2>
         <div id="adminButtons">
             <fieldset>
-                <legend>Nuevo</legend>
-                <button id="btnNuevoCliente">Nuevo</button>
-            </fieldset>
-            <fieldset>
-                <legend>Guardar</legend>
-                <button>Guardar</button>
-            </fieldset>
-            <fieldset>
-                <legend>Registro</legend>
-                <button>Registro</button>
+                <button id="btnNuevoCliente"><i class="fa-solid fa-plus icono"></i> Nuevo Cliente</button>
             </fieldset>
         </div>
-        <form action="" id="formCliente">
-            <fieldset>
-                <legend>Datos generales</legend>
-                <label for="">Nombre del cliente:</label>
-                <input type="text">
-                <label for="">Telefono:</label>
-                <input type="text">
-                <label for="">Correo Electronico:</label>
-                <input type="email">
-                <label for="">Dirección:</label>
-                <input type="text">
-            </fieldset>
-            <fieldset>
-                <legend>Datos de facturacion</legend>
-                <label for="">Razon social:</label>
-                <input type="text">
-                <label for="">RFC:</label>
-                <input type="text">
-                <label for="">Uso de cfdi:</label>
-                <input type="text">
-            </fieldset>
-            <button type="submit" id="saveClient">Guardar cliente</button>
-        </form>
+
+        <div class="modal-container">
+            <div class="modal modal-close">
+                <p class="close">X</p>
+                <form action="" id="formCliente">
+                    <h2 id="tituloFormulario">Alta de cliente</h2>
+                    <fieldset>
+                        <legend>Datos generales</legend>
+                        <label for="">Nombre del cliente:</label>
+                        <input type="text">
+                        <label for="">Telefono:</label>
+                        <input type="text">
+                        <label for="">Correo Electronico:</label>
+                        <input type="email">
+                        <label for="">Dirección:</label>
+                        <input type="text">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Datos de facturacion</legend>
+                        <label for="">Razon social:</label>
+                        <input type="text">
+                        <label for="">RFC:</label>
+                        <input type="text">
+                        <label for="">Uso de cfdi:</label>
+                        <input type="text">
+                        <label for="">Constancia SAT:</label>
+                        <input type="file">
+                    </fieldset>
+                    <button type="submit" id="saveClient"><i class="fa-solid fa-floppy-disk icono"></i>Guardar cliente</button>
+                </form>
+            </div>
+        </div>
+
         <table id="table_id" class="display">
             <thead>
                 <tr>
@@ -90,8 +100,8 @@
                     <td>Eduardo Garcia lopez</td>
                     <td>Eduardo Garcia lopez</td>
                     <td>Eduardo Garcia lopez</td>
-                    <td><button>Editar</button></td>
-                    <td><button>Eliminar</button></td>
+                    <td><button id="editarCliente"><i class="fa-solid fa-pen-to-square fa-2x"></i></button></td>
+                    <td><button id="eliminarCliente"><i class="fa-solid fa-trash fa-2x"></i></button></td>
                 </tr>
                 <tr>
                     <td>2</td>
@@ -102,8 +112,8 @@
                     <td>Cecilia Garcia lopez</td>
                     <td>Cecilia Garcia lopez</td>
                     <td>Cecilia Garcia lopez</td>
-                    <td><button>Editar</button></td>
-                    <td><button>Eliminar</button></td>
+                    <td><button id="editarCliente"><i class="fa-solid fa-pen-to-square fa-2x"></i></button></td>
+                    <td><button id="eliminarCliente"><i class="fa-solid fa-trash fa-2x"></i></button></td>
                 </tr>
                 <tr>
                     <td>3</td>
@@ -114,8 +124,8 @@
                     <td>Ulises Dell 7480</td>
                     <td>Ulises Dell 7480</td>
                     <td>Ulises Dell 7480</td>
-                    <td><button>Editar</button></td>
-                    <td><button>Eliminar</button></td>
+                    <td><button id="editarCliente"><i class="fa-solid fa-pen-to-square fa-2x"></i></button></td>
+                    <td><button id="eliminarCliente"><i class="fa-solid fa-trash fa-2x"></i></button></td>
                 </tr>
                 <tr>
                     <td>4</td>
@@ -126,8 +136,8 @@
                     <td>Profesor Ivan</td>
                     <td>Profesor Ivan</td>
                     <td>Profesor Ivan</td>
-                    <td><button>Editar</button></td>
-                    <td><button>Eliminar</button></td>
+                    <td><button id="editarCliente"><i class="fa-solid fa-pen-to-square fa-2x"></i></button></td>
+                    <td><button id="eliminarCliente"><i class="fa-solid fa-trash fa-2x"></i></button></td>
                 </tr>
                 <tr>
                     <td>5</td>
@@ -138,8 +148,8 @@
                     <td>Arquitecto Yolomecalt</td>
                     <td>Arquitecto Yolomecalt</td>
                     <td>Arquitecto Yolomecalt</td>
-                    <td><button>Editar</button></td>
-                    <td><button>Eliminar</button></td>
+                    <td><button id="editarCliente"><i class="fa-solid fa-pen-to-square fa-2x"></i></button></td>
+                    <td><button id="eliminarCliente"><i class="fa-solid fa-trash fa-2x"></i></button></td>
                 </tr>
                 <tr>
                     <td>6</td>
@@ -150,8 +160,8 @@
                     <td>Arquitecto tlaxiaco</td>
                     <td>Arquitecto tlaxiaco</td>
                     <td>Arquitecto tlaxiaco</td>
-                    <td><button>Editar</button></td>
-                    <td><button>Eliminar</button></td>
+                    <td><button id="editarCliente"><i class="fa-solid fa-pen-to-square fa-2x"></i></button></td>
+                    <td><button id="eliminarCliente"><i class="fa-solid fa-trash fa-2x"></i></button></td>
                 </tr>
                 <tr>
                     <td>7</td>
@@ -162,8 +172,8 @@
                     <td>Alma Simancas Acevedo</td>
                     <td>Alma Simancas Acevedo</td>
                     <td>Alma Simancas Acevedo</td>
-                    <td><button>Editar</button></td>
-                    <td><button>Eliminar</button></td>
+                    <td><button id="editarCliente"><i class="fa-solid fa-pen-to-square fa-2x"></i></button></td>
+                    <td><button id="eliminarCliente"><i class="fa-solid fa-trash fa-2x"></i></button></td>
                 </tr>
                 <tr>
                     <td>8</td>
@@ -174,8 +184,8 @@
                     <td>Eufronsina</td>
                     <td>Eufronsina</td>
                     <td>Eufronsina</td>
-                    <td><button>Editar</button></td>
-                    <td><button>Eliminar</button></td>
+                    <td><button id="editarCliente"><i class="fa-solid fa-pen-to-square fa-2x"></i></button></td>
+                    <td><button id="eliminarCliente"><i class="fa-solid fa-trash fa-2x"></i></button></td>
                 </tr>
                 <tr>
                     <td>9</td>
@@ -186,8 +196,8 @@
                     <td>Belen</td>
                     <td>Belen</td>
                     <td>Belen</td>
-                    <td><button>Editar</button></td>
-                    <td><button>Eliminar</button></td>
+                    <td><button id="editarCliente"><i class="fa-solid fa-pen-to-square fa-2x"></i></button></td>
+                    <td><button id="eliminarCliente"><i class="fa-solid fa-trash fa-2x"></i></button></td>
                 </tr>
                 <tr>
                     <td>10</td>
@@ -198,8 +208,8 @@
                     <td>Mitzy</td>
                     <td>Mitzy</td>
                     <td>Mitzy</td>
-                    <td><button>Editar</button></td>
-                    <td><button>Eliminar</button></td>
+                    <td><button id="editarCliente"><i class="fa-solid fa-pen-to-square fa-2x"></i></button></td>
+                    <td><button id="eliminarCliente"><i class="fa-solid fa-trash fa-2x"></i></button></td>
                 </tr>
                 <tr>
                     <td>11</td>
@@ -210,8 +220,8 @@
                     <td>Elisa</td>
                     <td>Elisa</td>
                     <td>Elisa</td>
-                    <td><button>Editar</button></td>
-                    <td><button>Eliminar</button></td>
+                    <td><button id="editarCliente"><i class="fa-solid fa-pen-to-square fa-2x"></i></button></td>
+                    <td><button id="eliminarCliente"><i class="fa-solid fa-trash fa-2x"></i></button></td>
                 </tr>
                 <tr>
                     <td>12</td>
@@ -222,9 +232,9 @@
                     <td>Andres García España</td>
                     <td>GAEA941128IT5</td>
                     <td>Gastos en general</td>
-                    <td><button>Editar</button></td>
-                    <td><button>Eliminar</button></td>
-            </tr>
+                    <td><button id="editarCliente"><i class="fa-solid fa-pen-to-square fa-2x"></i></button></td>
+                    <td><button id="eliminarCliente"><i class="fa-solid fa-trash fa-2x"></i></button></td>
+                </tr>
             </tbody>
         </table>
     </section>
@@ -234,6 +244,9 @@
     <!-- ----------------------------------------------------------------------- -->
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/datatables.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
     <script src="js/index.js"></script>
 </body>
+
 </html>

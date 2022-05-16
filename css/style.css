@@ -3,55 +3,64 @@ html {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
     background-color: #3B86B8;
-    height: 50px;
     width: 100%;
     text-align: center;
+    padding: 15px;
 }
+
+
 
 /* -------------------------------------------------------------------------- */
 /*                             SECCION NAVEGACION                             */
 /* -------------------------------------------------------------------------- */
-
-section {
+nav {
     background-color: #4D515D;
-    min-height: 800px;
-    max-height: auto;
+    /* min-height: 1000px; */
+    min-height: 150vh;
     width: 20%;
     display: inline-block;
 }
 
-section li {
+nav li {
     display: block;
     list-style: none;
 }
 
-section a {
+nav a {
     text-decoration: none;
     color: white;
     padding: 20px;
     display: block;
 }
 
-section a:hover {
+nav a:hover {
     background-color: #3B86B8
 }
 
-.active {
-    background-color: #3B86B8;
+nav .active {
+    background-color: #37739b;
 }
+
+.icono {
+    color: #000;
+    margin-right: 10px;
+    font-size: 1.3em;
+}
+
 
 /* -------------------------------------------------------------------------- */
 /*                           SECCCION DEL CONTENIDO                           */
 /* -------------------------------------------------------------------------- */
-
 #contenido {
     position: absolute;
     display: inline-block;
     width: 80%;
+    height: 100vh;
     background-color: white;
     padding-bottom: 3px;
 }
@@ -65,18 +74,52 @@ section a:hover {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-/* ------------------ FORMULARIO ADMINISTRACION DE CLIENTES ----------------- */
-#formCliente {
-    width: 50%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    /*     background-color: #94C454; */
-    margin: 0 auto;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-    display: none;
+/* -------------------------------------------------------------------------- */
+/*                          VENTANA MODAL FORMULARIO                          */
+/* -------------------------------------------------------------------------- */
+.modal-container {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-fieldset {
+.modal {
+    background-color: #FFF;
+    position: relative;
+    transition: transform 1s;
+    transform: translateY(0%);
+    width: 50%;
+}
 
+.close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: #c44a4a;
+    color: #FFF;
+    line-height: 25px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.modal-close {
+    transform: translateY(0%);
+}
+
+/* ------------------ FORMULARIO ADMINISTRACION DE CLIENTES ----------------- */
+fieldset {
     padding: 10px;
     margin: 10px;
 }
@@ -85,7 +128,13 @@ legend {
     font-size: 1.2em;
     font-weight: bold;
     text-transform: uppercase;
+}
 
+#formCliente {
+    margin: 0 auto;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    display: none;
+    padding: 25px;
 }
 
 #formCliente label {
@@ -93,6 +142,7 @@ legend {
     height: 30px;
     padding: 5px;
     display: inline-block;
+    font-weight: 300;
 }
 
 #formCliente input {
@@ -113,26 +163,25 @@ legend {
 }
 
 /* --------------------- TABLA CON REGISTRO DE USUARIOS --------------------- */
-
-#table_id_wrapper{
-    width: 95%;
+#table_id_wrapper {
+    width: 98%;
     margin: 0 auto;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* ------------------- BOTONES ADMINISTRACION DE CLIENTES ------------------- */
-#adminButtons{
+#adminButtons {
     display: flex;
-    justify-content: flex-end;
-    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.3);
+    justify-content: space-evenly;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
     margin: 10px;
 }
 
-#adminButtons fieldset{
+#adminButtons fieldset {
     width: 30%;
 }
 
-#adminButtons button{
+#adminButtons button {
     width: 100%;
     height: 40px;
     background-color: #3B86B8;
@@ -140,8 +189,30 @@ legend {
     font-weight: bold;
 }
 
-/* ----------------------- FORMULARIO NOTAS DE ENTRADA ---------------------- */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------- FORMULARIO NOTAS DE ENTRADA ---------------------- */
 #folio {
     width: 30%;
     font-size: 1em;
@@ -170,8 +241,6 @@ legend {
     width: 36%;
     display: inline-block;
 }
-
-#dispositivo {}
 
 #formNotas #dispositivo label {
     width: 15%;
@@ -234,7 +303,7 @@ legend {
     display: inline-block;
 }
 
-#newServicio{
+#newServicio {
     width: 14%;
     display: inline-block;
     position: absolute;
@@ -292,19 +361,23 @@ legend {
     font-weight: bold;
 }
 
-#servicioEquipo{
-    display: ;
+#servicioEquipo {
+    display: none;
 }
 
 /* -------------------------------------------------------------------------- */
 /*                            SECCION PIE DE PAGINA                           */
 /* -------------------------------------------------------------------------- */
-
-footer {
+/* footer {
     position: relative;
     top: 450px;
     background-color: aquamarine;
     height: 50px;
     width: 100%;
     margin-top: 25px;
+} */
+
+footer {
+    clear: both;
+    background-color: #37739b;
 }

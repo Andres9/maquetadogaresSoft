@@ -15,22 +15,42 @@
     <header>
         <h1>GARESP - Servicio Informático</h1>
     </header>
-    <section>
-        <nav>
-            <ul>
-                <li>
-                    <a href="adminClientes.html">Administrar clientes</a>
-                </li>
-                <li>
-                    <a href="movClientes.html">Movimientos clientes</a>
-                </li>
-                <li><a href="notas.html" class="active">Notas entrada</a></li>
-                <li><a href="cotizacion.html">Cotizaciones</a></li>
-            </ul>
-        </nav>
-    </section>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="adminClientes.html" class="active"><i class="fa-solid fa-user icono"></i> Administrar clientes</a>
+            </li>
+            <li>
+                <a href="movClientes.html"><i class="fa-solid fa-user icono"></i> Movimientos clientes</a>
+            </li>
+            <li><a href="notas.html"><i class="fa-solid fa-user icono"></i> Notas entrada</a></li>
+            <li><a href="cotizacion.html"><i class="fa-solid fa-user icono"></i> Cotizaciones</a></li>
+        </ul>
+    </nav>
+ 
     <section id="contenido">
         <h2>Notas de entrada</h2>
+
+        <div id="adminButtons">
+            <fieldset>
+                <legend>Nuevo</legend>
+                <button id="btnNuevoCliente"><i class="fa-solid fa-plus icono"></i> Nuevo folio</button>
+            </fieldset>
+            <fieldset>
+                <legend>Guardar</legend>
+                <button>Movimientos</button>
+            </fieldset>
+            <fieldset>
+                <legend>Registro</legend>
+                <button>Entregadas</button>
+            </fieldset>
+            <fieldset>
+                <legend>Registro</legend>
+                <button>No Entregadas</button>
+            </fieldset>
+        </div>
+
         <div>
             <form action="" id="formNotas">
                 <div id="folio">
@@ -205,6 +225,7 @@
     <script src="js/picker.js"></script>
     <script src="js/picker.date.js"></script>
     <script src="js/picker.time.js"></script>
+    <script src="js/all.min.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>

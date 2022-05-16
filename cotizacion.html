@@ -9,44 +9,62 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/datatables.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,900;1,500;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
         <h1>GARESP - Servicio Informático</h1>
     </header>
-    <section>
-        <nav>
-            <ul>
 
-                <li>
-                    <a href="adminClientes.html" >Administrar clientes</a>
-                </li>
-                <li>
-                    <a href="movClientes.html">Movimientos clientes</a>
-                </li>
 
-                <li><a href="notas.html">Notas entrada</a></li>
-                <li><a href="cotizacion.html" class="active">Cotizaciones</a></li>
-            </ul>
-        </nav>
-    </section>
+    <nav>
+        <ul>
+            <li>
+                <a href="adminClientes.html" class="active"><i class="fa-solid fa-user icono"></i> Administrar clientes</a>
+            </li>
+            <li>
+                <a href="movClientes.html"><i class="fa-solid fa-user icono"></i> Movimientos clientes</a>
+            </li>
+            <li><a href="notas.html"><i class="fa-solid fa-user icono"></i> Notas entrada</a></li>
+            <li><a href="cotizacion.html"><i class="fa-solid fa-user icono"></i> Cotizaciones</a></li>
+        </ul>
+    </nav>
+
     <section id="contenido">
         <h2>Movimientos Clientes</h2>
 
-        <div>
-            <form action="">
-                <label for="">Buscar</label>
-                <input type="text">
-                <button>Buscar</button>
-            </form>
+        <div id="adminButtons">
+            <fieldset>
+                <legend>Nuevo</legend>
+                <button id="btnNuevoCliente"><i class="fa-solid fa-plus icono"></i> Nuevo Cotizacion</button>
+            </fieldset>
+            <fieldset>
+                <legend>Registro</legend>
+                <button>Todos los registros</button>
+            </fieldset>
+            <fieldset>
+                <legend>Guardar</legend>
+                <button>Completadas</button>
+            </fieldset>
+            <fieldset>
+                <legend>Registro</legend>
+                <button>No completadas</button>
+            </fieldset>
         </div>
+
     </section>
     <footer>Pie de página</footer>
-
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/datatables.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
     <script src="js/index.js"></script>
-</body>
 
 </html>
