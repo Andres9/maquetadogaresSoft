@@ -13,8 +13,6 @@ header {
     padding: 15px;
 }
 
-
-
 /* -------------------------------------------------------------------------- */
 /*                             SECCION NAVEGACION                             */
 /* -------------------------------------------------------------------------- */
@@ -212,7 +210,10 @@ legend {
 
 
 
-/* ----------------------- FORMULARIO NOTAS DE ENTRADA ---------------------- */
+/* -------------------------------------------------------------------------- */
+/*                         FORMULARIO NOTAS DE ENTRADA                        */
+/* -------------------------------------------------------------------------- */
+/* ---------------------------------- FOLIO --------------------------------- */
 #folio {
     width: 30%;
     font-size: 1em;
@@ -227,34 +228,36 @@ legend {
     color: #FFF;
 }
 
+/* --------------------------------- FECHAS --------------------------------- */
+
 #fechas {
     width: 69%;
     display: inline-block;
 }
+
+/* --------------------------------- CLIENTE -------------------------------- */
 
 #cliente {
     width: 63%;
     display: inline-block;
 }
 
+/* ------------------------------- FACTURACION ------------------------------ */
 #facturacion {
     width: 36%;
     display: inline-block;
 }
 
-#formNotas #dispositivo label {
-    width: 15%;
-    display: inline-block;
+/* ----------------------------- SERVICIO EQUIPO ---------------------------- */
+#seccion2 {
+    border-bottom: 2px solid #000;
+    margin-bottom: 10px;
 }
 
-#formNotas #dispositivo input {
-    width: 31%;
-    display: inline-block;
-}
-
-#formNotas #dispositivo select {
-    width: 31%;
-    display: inline-block;
+#servicioEquipo {
+    display: none;
+    height: 100vh;
+    overflow: scroll;
 }
 
 #problema {
@@ -288,6 +291,49 @@ legend {
     display: inline-block;
 }
 
+#tablaServicio {
+    width: 100%;
+}
+
+/* --------------------------- TABLA DE SERVICIOS --------------------------- */
+#lista {
+    width: 85%;
+    display: inline-block;
+    background-color: #ccc;
+    min-height: 307px;
+}
+
+/* --------------------------- BOTONES FORMULARIO --------------------------- */
+#newServicio {
+    width: 14%;
+    display: inline-block;
+    position: absolute;
+    background-color: #000;
+    color: #FFF;
+}
+
+/* ---------------------------- ESTILOS GENERALES --------------------------- */
+#formNotas {
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+#formNotas #dispositivo label {
+    width: 15%;
+    display: inline-block;
+}
+
+#formNotas #dispositivo input {
+    width: 31%;
+    display: inline-block;
+}
+
+#formNotas #dispositivo select {
+    width: 31%;
+    display: inline-block;
+}
+
 #formNotas #servicio label {
     width: 10%;
     display: inline-block;
@@ -296,36 +342,6 @@ legend {
 #formNotas #servicio input {
     width: 36%;
     display: inline-block;
-}
-
-#lista {
-    width: 85%;
-    display: inline-block;
-}
-
-#newServicio {
-    width: 14%;
-    display: inline-block;
-    position: absolute;
-}
-
-#formNotas {
-    width: 90%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    /*     background-color: #94C454; */
-    margin: 0 auto;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-}
-
-fieldset {
-    padding: 10px;
-    margin: 10px;
-}
-
-legend {
-    font-size: 1.2em;
-    font-weight: bold;
-    text-transform: uppercase;
 }
 
 #formNotas label {
@@ -361,23 +377,50 @@ legend {
     font-weight: bold;
 }
 
-#servicioEquipo {
-    display: none;
+/* -------------------------- SECCION DISPOSITIVOS -------------------------- */
+#imagen {
+    width: 30%;
+    display: inline-block;
+    background-color: #37739b;
+    height: 80px;
+}
+
+#imagen img {
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#infoEquipo {
+    width: 60%;
+    display: inline-block;
+
+}
+
+.equipo h3 {
+    background-color: #4D515D;
+    color: #FFF;
+}
+
+.listaEquipo {
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+    width: 48%;
+    display: inline-block;
+    padding: 10px;
+    margin: 4px;
+    border: 1px solid #000;
 }
 
 /* -------------------------------------------------------------------------- */
 /*                            SECCION PIE DE PAGINA                           */
 /* -------------------------------------------------------------------------- */
-/* footer {
-    position: relative;
-    top: 450px;
-    background-color: aquamarine;
-    height: 50px;
-    width: 100%;
-    margin-top: 25px;
-} */
 
-footer {
+/* footer {
     clear: both;
     background-color: #37739b;
-}
+} */
